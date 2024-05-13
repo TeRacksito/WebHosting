@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Author: Angel Krasimirov Stoyanov, in collaboration with Isidro.">
+    <title>Crear cuenta</title>
+
+    <!-- Enlaces a los estilos -->
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/form.css">
+
+    <!-- Enlaces a la fuente de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Se usan etiquetas semánticas para estructurar el contenido -->
+    <header>
+        <!-- Se intenta mantener la estructura de la página lo más simple posible.
+             Dejamos todo estilo para el CSS -->
+        <h2>WEBHOSTING AUTOMÁTICO</h2>
+        <nav>
+            <!-- Esto es un botón que cambia el tema de la página.
+                 Se usa JavaScript para cambiar el tema, pero el botón es un checkbox.
+                 Lo que quiere decir que la información de si está activado o no se guarda en el checkbox -->
+            <img src="icon/Dark-theme-01.png" alt="" class="toggle-theme">
+            <input type="checkbox" id="toggle-theme" class="toggle-theme">
+
+        </nav>
+    </header>
+
+    <!-- Sección principal de la página -->
+    <main>
+        <!-- Es común usar clases contenedoras para agrupar elementos (container, subcontainer...) -->
+        <article class="container">
+            <section class="subcontainer title"> <!-- Usamos varias clases para darle estilo a los elementos -->
+                <h1>¡Crea un usuario!</h1>
+            </section>
+            <section class="subcontainer">
+                <p>
+                    ¡Regístrate para poder subir tu página a través del servidor FTP!
+                </p>
+            </section>
+            <section class="subcontainer">
+
+                <!-- Formulario para crear un usuario
+                     Usamos el método POST para evitar que se vean los datos en la URL -->
+                <form action="/newuser.php" method="post">
+
+                    <!-- Agrupamos los elementos del formulario en filas -->
+                    <div class="form-row">
+
+                        <!-- Y cada elemento tiene un wrapper con la clase input-data -->
+                        <div class="input-data">
+
+                            <!-- Cada input tiene un id para poder referenciarlo desde JavaScript
+                                 También tiene un atributo name para poder enviarlo al servidor
+                                 Y un atributo placeholder para darle un texto de ayuda al usuario -->
+                            <input type="text" id="nameField" name="name" required minlength="3" maxlength="20"
+                                placeholder="Pedro, Carlos...">
+
+                            <!-- Podemos usar elementos vacíos para dar estilo a las cosas.
+                                 En este caso usamos un div con la clase underline para hacer un subrayado -->
+                            <div class="underline"></div>
+                            <label for="nameField">Nombre de usuario</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-data">
+                            <input type="text" id="surnameField" name="surname" required minlength="3" maxlength="20"
+                                placeholder="García, Martin...">
+                            <div class="underline"></div>
+                            <label for="surnameField">Apellido</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-data">
+
+                            <!-- En este caso, el tipo de input es password para que no se vea lo que escribe el usuario -->
+                            <input type="password" id="pass1Field" name="password" required minlength="6" maxlength="20"
+                                placeholder="">
+                            <div class="underline"></div>
+                            <label for="pass1Field">Contraseña</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-data">
+                            <input type="password" id="pass2Field" required minlength="6" maxlength="20"
+                                placeholder="Repite la misma contraseña...">
+                            <div class="underline"></div>
+                            <label for="pass2Field">Repetir la contraseña</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="send-area">
+                            <input type="submit" id="submitButton" value="Crear usuario" class="send">
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </article>
+
+        <!-- Este artículo se muestra mientras se carga la página.
+             Tiene un spinner que se mueve para indicar que la página está cargando.
+             JavaScript se encarga de ocultarlo y eliminarlo cuando la página está lista -->
+        <article class="loading">
+
+            <!-- Podemos ver que es muy simple estructuralmente.
+                 Eso es porque todo el estilo se maneja con CSS -->
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </article>
+    </main>
+    <section>
+
+        <!-- Sección para explicar qué es la página -->
+        <section class="container">
+            <div class="subcontainer">
+                <h2>¿Qué es esta página?</h2>
+            </div>
+            <div class="subcontainer">
+                <p>
+
+                    <!-- Se unan etiquetas span para darle estilo a una parte del texto -->
+                    Esta página fue creada con el fin de poder configurar un <span class="accent">usuario y
+                        contraseña</span> para poder subir archivos a través de un servidor FTP.
+                </p>
+                <p>
+                    Existe un servidor web que muestra páginas web. Para poder subir tu propia página web,
+                    necesitas acceso al mismo. Actualmente la forma de acceder es a través de un servidor FTP.
+                    Para acceder a dicho servidor FTP necesitas un usuario y una contraseña.
+                </p>
+                <p>
+                    Si bien la creación de un usuario y contraseña, así como el directorio raíz <i>(chroot folder)</i>
+                    del mismo,
+                    se puede hacer manualmente, esta página facilita el proceso.
+                </p>
+            </div>
+            <div class="subcontainer">
+                <h2>¿Cómo se hizo esta página?</h2>
+            </div>
+            <div class="subcontainer">
+                <p>
+                    <span class="accent">¡Es más sencilla de lo que parece!</span> Simplemente se utilizó
+                    HTML y CSS "Vanilla", es decir, sin ningún tipo de framework o librería.
+                    Además, se utilizó JavaScript para poder cambiar el tema de la página. Para la parte de backend, se
+                    utilizó PHP para realizar las configuraciones en el servidor.
+                </p>
+            </div>
+            <div class="subcontainer">
+                <h2>¿Puedo ver el código fuente?</h2>
+            </div>
+            <div class="subcontainer">
+                <p>
+                    ¡Claro! lo puedes ver en este <a href="https://github.com/TeRacksito/WebHosting" class="secondary">repositorio de GitHub</a>.
+                    Se trata de una versión con comentarios y explicaciones para que puedas entender cómo se hizo.
+                </p>
+            </div>
+        </section>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Made by <b>Angel Krasimirov Stoyanov</b> with love &lt;3</p>
+        <p>In collaboration with <b>Isidro</b></p>
+    </footer>
+
+    <!-- Enlaces a los scripts.
+         Se recomienda ponerlos al final del body para que la página cargue correctamente.
+         Puesto que los scripts son un elemento como cualquier otro, se pueden poner en cualquier parte del body.
+         Pero, si se ponen al principio, es posible que se ejecuten antes de que la página esté lista,
+         lo que provocaría errores en la ejecución de los scripts.
+
+         Tanto es así que, en este caso, el script loaded.js se encarga de esperar a que la página esté lista para
+         ocultar el spinner de carga y permitir que el resto de scripts se ejecuten correctamente. -->
+    <script src="js/loaded.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/form.js"></script>
+</body>
+
+</html>

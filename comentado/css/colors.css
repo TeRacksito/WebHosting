@@ -1,0 +1,148 @@
+/* Este archivo contiene las variables de colores para el tema claro y oscuro.
+   Estos colores se generaron con la herramienta https://www.realtimecolors.com/ */
+
+
+/* Colores para el tema claro.
+   [data-theme="light"] es como un if que verifica si el tema es claro. */
+:root[data-theme="light"] {
+  --text-50: #e8f6fc;
+  --text-100: #d2edf9;
+  --text-200: #a5dcf3;
+  --text-300: #78caed;
+  --text-400: #4ab8e8;
+  --text-500: #1da7e2;
+  --text-600: #1785b5;
+  --text-700: #126487;
+  --text-800: #0c435a;
+  --text-900: #06212d;
+  --text-950: #031117;
+
+  --background-50: #e9f7fc;
+  --background-100: #d2eff9;
+  --background-200: #a5def3;
+  --background-300: #78ceed;
+  --background-400: #4bbde7;
+  --background-500: #1fade0;
+  --background-600: #188ab4;
+  --background-700: #126887;
+  --background-800: #0c455a;
+  --background-900: #06232d;
+  --background-950: #031116;
+
+  --primary-50: #e9f7fc;
+  --primary-100: #d2eff9;
+  --primary-200: #a5def3;
+  --primary-300: #78ceed;
+  --primary-400: #4bbde7;
+  --primary-500: #1fade0;
+  --primary-600: #188ab4;
+  --primary-700: #126887;
+  --primary-800: #0c455a;
+  --primary-900: #06232d;
+  --primary-950: #031116;
+
+  --secondary-50: #fce9fb;
+  --secondary-100: #f9d2f7;
+  --secondary-200: #f2a6ee;
+  --secondary-300: #ec79e6;
+  --secondary-400: #e64cde;
+  --secondary-500: #df20d6;
+  --secondary-600: #b319ab;
+  --secondary-700: #861380;
+  --secondary-800: #590d55;
+  --secondary-900: #2d062b;
+  --secondary-950: #160315;
+
+  --accent-50: #e6f8ff;
+  --accent-100: #cdf1fe;
+  --accent-200: #9be3fd;
+  --accent-300: #68d5fd;
+  --accent-400: #36c7fc;
+  --accent-500: #04b9fb;
+  --accent-600: #0394c9;
+  --accent-700: #026f97;
+  --accent-800: #024a64;
+  --accent-900: #012532;
+  --accent-950: #001319;
+
+  --container-shadow: #a7a7a7;
+  --filter-img: invert(0);
+  --img-rotation: rotate(0deg);
+}
+
+/* Colores para el tema oscuro. */
+:root[data-theme="dark"] {
+  --text-50: #031117;
+  --text-100: #06212d;
+  --text-200: #0c435a;
+  --text-300: #126487;
+  --text-400: #1785b5;
+  --text-500: #1da7e2;
+  --text-600: #4ab8e8;
+  --text-700: #78caed;
+  --text-800: #a5dcf3;
+  --text-900: #d2edf9;
+  --text-950: #e8f6fc;
+
+  --background-50: #031116;
+  --background-100: #06232d;
+  --background-200: #0c455a;
+  --background-300: #126887;
+  --background-400: #188ab4;
+  --background-500: #1fade0;
+  --background-600: #4bbde7;
+  --background-700: #78ceed;
+  --background-800: #a5def3;
+  --background-900: #d2eff9;
+  --background-950: #e9f7fc;
+
+  --primary-50: #031116;
+  --primary-100: #06232d;
+  --primary-200: #0c455a;
+  --primary-300: #126887;
+  --primary-400: #188ab4;
+  --primary-500: #1fade0;
+  --primary-600: #4bbde7;
+  --primary-700: #78ceed;
+  --primary-800: #a5def3;
+  --primary-900: #d2eff9;
+  --primary-950: #e9f7fc;
+
+  --secondary-50: #160315;
+  --secondary-100: #2d062b;
+  --secondary-200: #590d55;
+  --secondary-300: #861380;
+  --secondary-400: #b319ab;
+  --secondary-500: #df20d6;
+  --secondary-600: #e64cde;
+  --secondary-700: #ec79e6;
+  --secondary-800: #f2a6ee;
+  --secondary-900: #f9d2f7;
+  --secondary-950: #fce9fb;
+
+  --accent-50: #001319;
+  --accent-100: #012532;
+  --accent-200: #024a64;
+  --accent-300: #026f97;
+  --accent-400: #0394c9;
+  --accent-500: #04b9fb;
+  --accent-600: #36c7fc;
+  --accent-700: #68d5fd;
+  --accent-800: #9be3fd;
+  --accent-900: #cdf1fe;
+  --accent-950: #e6f8ff;
+
+  --container-shadow: #000;
+  --filter-img: invert(1);
+  --img-rotation: rotate(180deg);
+}
+
+
+:root {
+  --linearPrimarySecondary: linear-gradient(#7dcfed, #861380);
+  --linearPrimaryAccent: linear-gradient(#7dcfed, #0ebcfb);
+  --linearSecondaryAccent: linear-gradient(#861380, #0ebcfb);
+  --radialPrimarySecondary: radial-gradient(#7dcfed, #861380);
+  --radialPrimaryAccent: radial-gradient(#7dcfed, #0ebcfb);
+  --radialSecondaryAccent: radial-gradient(#861380, #0ebcfb);
+}
