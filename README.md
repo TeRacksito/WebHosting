@@ -20,7 +20,7 @@ Se trata una aplicación web y un servidor FTP para hacer webhosting automático
   sudo apt install $(cat pkglist.txt) -y
 ```
 
-2. Luego, copia los archivos de no_comentado y pegalos en el directorio raíz de tu servidor web (_"/var/www/html", por defecto_).
+2. Luego, copia los archivos de [no_comentado](https://github.com/TeRacksito/WebHosting/tree/main/no_comentado) y pegalos en el directorio raíz de tu servidor web (_"/var/www/html", por defecto_).
 
 ```bash
   sudo cp -R /ruta/a/no_comentado/* /var/www/html/.
