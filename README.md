@@ -14,7 +14,7 @@ Se trata una aplicación web y un servidor FTP para hacer webhosting automático
 
 ## Instalación
 
-1. Primero debemos de instalar los paquetes necesarios. Tienes una lista de ellos en **pkglist.txt**. Puedes instalarlos todos a la vez con:
+1. Primero debemos de instalar los paquetes necesarios. Tienes una lista de ellos en [pkglist.txt](https://github.com/TeRacksito/WebHosting/blob/main/pkglist.txt). Puedes instalarlos todos a la vez con:
 
 ```bash
   sudo apt install $(cat pkglist.txt) -y
