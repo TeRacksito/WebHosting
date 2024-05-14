@@ -142,12 +142,12 @@ Cambia los siguientes atributos. Te pongo `...` para que entiendas más o menos 
 
 `chroot_local_user` dicta que los usuarios locales se verán encerrados en su directorio home cuando usan el servidor FTP.
 
-2. #### Crea el directorio /etc/vsftpd.chroot_list
+2. #### Crea el archivo /etc/vsftpd.chroot_list
 
 Es probable que no existe, crealo mediante:
 
 ```bash
-  mkdir -p /etc/vsftpd.chroot_list
+  touch /etc/vsftpd.chroot_list
 ```
 
 Dentro, añade el nombre de los usuarios que NO quieres que se vean afectados por el chroot.
