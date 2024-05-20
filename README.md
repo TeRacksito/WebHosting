@@ -14,13 +14,13 @@ Se trata una aplicación web y un servidor FTP para hacer webhosting automático
 
 ## Instalación
 
-1. Primero debemos de instalar los paquetes necesarios. Tienes una lista de ellos en **pkglist.txt**. Puedes instalarlos todos a la vez con:
+1. Primero debemos de instalar los paquetes necesarios. Tienes una lista de ellos en [pkglist.txt](https://github.com/TeRacksito/WebHosting/blob/main/pkglist.txt). Puedes instalarlos todos a la vez con:
 
 ```bash
   sudo apt install $(cat pkglist.txt) -y
 ```
 
-2. Luego, copia los archivos de no_comentado y pegalos en el directorio raíz de tu servidor web (_"/var/www/html", por defecto_).
+2. Luego, copia los archivos de [no_comentado](https://github.com/TeRacksito/WebHosting/tree/main/no_comentado) y pegalos en el directorio raíz de tu servidor web (_"/var/www/html", por defecto_).
 
 ```bash
   sudo cp -R /ruta/a/no_comentado/* /var/www/html/.
@@ -142,12 +142,12 @@ Cambia los siguientes atributos. Te pongo `...` para que entiendas más o menos 
 
 `chroot_local_user` dicta que los usuarios locales se verán encerrados en su directorio home cuando usan el servidor FTP.
 
-2. #### Crea el directorio /etc/vsftpd.chroot_list
+2. #### Crea el archivo /etc/vsftpd.chroot_list
 
 Es probable que no existe, crealo mediante:
 
 ```bash
-  mkdir -p /etc/vsftpd.chroot_list
+  touch /etc/vsftpd.chroot_list
 ```
 
 Dentro, añade el nombre de los usuarios que NO quieres que se vean afectados por el chroot.
