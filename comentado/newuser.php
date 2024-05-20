@@ -19,10 +19,13 @@ $password = $_POST['password'];
 // ayuda para el usuario, pero la comprobación real se hace en el backend.
 
 if (!(checkLength($name, 3, 20) && checkLength($surname, 3, 20) && checkLength($password, 6, 20))) {
-    if (!(checkCharacters($name) && checkCharacters($surname) && checkCharacters($password))) {
-        header("Location: /error.html");
-        exit();
-    }
+    header("Location: /error.html");
+    exit();
+}
+
+if (!(checkCharacters($name) && checkCharacters($surname) && checkCharacters($password))) {
+    header("Location: /error.html");
+    exit();
 }
 
 // Concatenamos el nombre y apellido para formar el nombre de usuario.
